@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자판기</title>
+</head>
+<body>
+    <h1>자판기</h1>
+    <button type="button" action="/" method="get">상품 관리</button>
+    <button type="button" action="/restCash" method="get">잔돈 충전</button>
+    <button type="button" action="/user" method="get">상품 구매</button>
+
+    <div>
+        <h2>상품 관리</h2>
+
+        <div class="add-product">
+            <h3>상품 추가하기</h3>
+            <form action="/" method="get" id="productForm">
+                <input type="text" id="product" placeholder="상품명" name="userName" value=""/>
+                <input type="text" id="price" placeholder="가격" name="userPrice" value=""/>
+                <input type="text" id="amount" placeholder="수량" name="userAmount" value=""/>
+                <button type="button" onClick="addProduct()">추가하기</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>상품 추가하기</h3>
+            <table>
+                <thead>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>앨범1</td>
+                        <td>20000</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>앨범2</td>
+                        <td>50000</td>
+                        <td>7</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+    function addProduct() {
+        const addproducts = document.getElementById("productForm");
+        const addproductsInput = addproducts.querySelector("input");
+        const productValue = addproductsInput.value;
+        console.log(product.value, price.value, amount.value);
+        //id 값으로 가져오는건 다시 보자
+        
+        
+    }    
+    </script>
+
+
+</body>
+</html>
